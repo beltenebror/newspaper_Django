@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock title %}
-
+{% block title %}Home{% endblock %}
 {% block content %}
-{% if user.is_authenticated %}
-  ¡Hola {{ user.username }}!
-{% else %}
-  <p>No estás logueado :c</p>
-{% endif %}
-{% endblock content %}
+
+    <div class="jumbotron">
+        <h1 class="display- ">Newspaper app</h1>
+        <p class="lead">A Newspaper website construida con Django.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">Ver los artículos</a>
+        </p>
+    </div>
+{% endblock %}
